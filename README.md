@@ -17,7 +17,7 @@
 
 ### Clone GIT
 ```
-https://github.com/aryonuwi/ethisBETest.git [Folder name]
+https://github.com/aryonuwi/satukelas.git [Folder name]
 ```
 ### Get Depedencies with Composer
 ```
