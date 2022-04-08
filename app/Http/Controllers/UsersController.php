@@ -53,7 +53,7 @@ class UsersController extends Controller
             "name"=>"required",
             "age"=>"required",
         ]);
-        if(!is_int($id)){
+        if(!is_numeric($id)){
             return $this->responseFailed(['Id is failed']);
         }
         if ($validate->fails()) {
