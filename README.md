@@ -2,7 +2,7 @@
 *[aryo nurwanto](https://github.com/aryonuwi)*
 
 ## Start and Finis test
-- 14:30 - 15:45
+- 14:30 - 15:50
 
 ## Prerequired
 - [PHP v8.1.3](https://www.php.net/releases/8.1/en.php)
