@@ -30,8 +30,8 @@ create file .env
 ### ENV Database Required
 ```
 DB_CONNECTION=mysql
-DB_HOST=[pgsql HOST]
-DB_PORT=[pgsql PORT]
+DB_HOST=[mysql HOST]
+DB_PORT=[mysql PORT]
 DB_DATABASE=[Database Name]
 DB_USERNAME=[Users Name]
 DB_PASSWORD= [Password]
