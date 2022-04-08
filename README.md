@@ -13,4 +13,36 @@
 ## API Documentation
 - [API](https://documenter.getpostman.com/view/13234224/UVyxPtHA)
 
-## INFO
+## INFO Installation
+
+### Clone GIT
+```
+https://github.com/aryonuwi/ethisBETest.git [Folder name]
+```
+### Get Depedencies with Composer
+```
+composer install
+```
+
+### ENV Database Required
+create file .env 
+
+### ENV Database Required
+```
+DB_CONNECTION=mysql
+DB_HOST=[pgsql HOST]
+DB_PORT=[pgsql PORT]
+DB_DATABASE=[Database Name]
+DB_USERNAME=[Users Name]
+DB_PASSWORD= [Password]
+```
+
+### Migration Database
+- Create tabel untuk database
+`````
+ php artisan migrate
+`````
+### RUN APPLICATION
+`````
+ php localhost:8000 -t public
+`````
