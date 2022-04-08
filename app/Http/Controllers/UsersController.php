@@ -69,7 +69,7 @@ class UsersController extends Controller
         $respons = $this->users->updateDB($data,$id);
 
         if(is_int($respons)){
-            return $this->responseSuccess(['Id'=>$respons,'name'=>$name,'age'=>$age],'Success Created Topic','created');
+            return $this->responseSuccess(['Id'=>$respons,'name'=>$name,'age'=>$age],'Success Created ','created');
         }else{
             return $this->responseFailed(['Created failed']);
         }
@@ -106,7 +106,7 @@ class UsersController extends Controller
         $respons = $this->users->updateDB($data,$id);
 
         if($respons){
-            return $this->responseSuccess(['Id'=>$id,'name'=>$datReturn->name,'age'=>$datReturn->age],'Success Deleted Topic','deleted');
+            return $this->responseSuccess(['Id'=>$id,'name'=>$datReturn->name,'age'=>$datReturn->age],'Success Deleted ','deleted');
         }else{
             return $this->responseFailed(['deleted failed']);
         }
@@ -124,7 +124,7 @@ class UsersController extends Controller
         $respons = $this->users->deletePermanet($id);
 
         if($respons){
-            return $this->responseSuccess(['Id'=>$id,'title'=>$datReturn->name,'description'=>$datReturn->age],'Success Deleted Topic','deleted');
+            return $this->responseSuccess(['Id'=>$id,'title'=>$datReturn->name,'description'=>$datReturn->age],'Success Deleted ','deleted');
         }else{
             return $this->responseFailed(['deleted failed']);
         }
