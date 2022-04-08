@@ -83,7 +83,6 @@ class UsersController extends Controller
 
     public function getUser($id)
     {
-        dd($id);
         $datReturn = $this->users->getUser($id);
         if(!empty($datReturn)){
             return $this->responseSuccess($datReturn);
