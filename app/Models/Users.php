@@ -48,7 +48,7 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
     public function getUsers()
     {
         return DB::table('users')
-                    ->select('id','name','age','createAt')
+                    ->select('id','name','age','createdAt')
                     ->where('status','1')
                     ->get()
                     ->all();
@@ -57,7 +57,7 @@ class Users extends Model implements AuthenticatableContract, AuthorizableContra
     public function getUser($id)
     {
         return DB::table('users')
-                    ->select('id','name','age','createAt')
+                    ->select('id','name','age','createdAt')
                     ->where('id',$id)
                     ->where('status','1')
                     ->get()

@@ -20,8 +20,8 @@ class UsersController extends Controller
     function create(Request $req){
 
         $validate = Validator::make($req->all(),[
-            "name"=>"required|string|unique:topics,title",
-            "age"=>"string",
+            "name"=>"required",
+            "age"=>"required",
         ]);
 
         if ($validate->fails()) {
@@ -50,8 +50,8 @@ class UsersController extends Controller
 
     function update($id, Request $req){
         $validate = Validator::make($req->all(),[
-            "name"=>"required|string|unique:topics,title",
-            "age"=>"string",
+            "name"=>"required",
+            "age"=>"required",
         ]);
         if(!is_int($id)){
             return $this->responseFailed(['Id is failed']);
@@ -83,6 +83,7 @@ class UsersController extends Controller
 
     public function getUser($id)
     {
+        dd($id);
         $datReturn = $this->users->getUser($id);
         if(!empty($datReturn)){
             return $this->responseSuccess($datReturn);
