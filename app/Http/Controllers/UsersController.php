@@ -64,7 +64,7 @@ class UsersController extends Controller
         $data = [
             'name'=>$name,
             'age'=>$age,
-            'createdAt'=>date('Y-m-d H:i')
+            'updatedAt'=>date('Y-m-d H:i')
         ];
         $respons = $this->users->updateDB($data,$id);
 
@@ -106,7 +106,7 @@ class UsersController extends Controller
         $respons = $this->users->updateDB($data,$id);
 
         if($respons){
-            return $this->responseSuccess(['Id'=>$id,'title'=>$datReturn->name,'description'=>$datReturn->age],'Success Deleted Topic','deleted');
+            return $this->responseSuccess(['Id'=>$id,'name'=>$datReturn->name,'age'=>$datReturn->age],'Success Deleted Topic','deleted');
         }else{
             return $this->responseFailed(['deleted failed']);
         }
